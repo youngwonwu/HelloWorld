@@ -50,15 +50,15 @@ public class NestedExample {
 		//   ***
 		//  ****
 		// *****
-//		for (int j = 4; j >= 1; j--) {
-//			for (int i = 1; i <= j; i++) {
-//				System.out.print(" ");
-//			}
-//			for (int s = 1; s  1; s++) {
-//				System.out.print("*");
-//			}
-//			System.out.println();
-//		}
+		for (int j = 1; j <= 5; j++) {
+			for (int i = 5; i >= j; i--) {
+				System.out.print(" ");
+			}
+			for (int s = 1; s<=j; s++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
 
 	}
 

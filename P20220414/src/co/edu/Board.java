@@ -57,7 +57,7 @@ public class Board {
 
 	public void getInfo() {
 		//게시물번호 제목 내용 작성자 조회수
-		System.out.printf("%3d %-30s %-15s %-5s %2d\n",
+		System.out.printf("%3d %-15s %-15s %-5s %2d\n",
 				this.boardNo, this.title, this.content, this.writer, this.searchCnt);
 	}
 	
@@ -73,5 +73,7 @@ public class Board {
 		System.out.printf(info,
 				this.boardNo, this.writer, this.title, this.searchCnt, this.content);
 	}
+	
+	
 	
 }

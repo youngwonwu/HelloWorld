@@ -1,5 +1,6 @@
 package co.edu;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class BoardExample {
@@ -16,7 +17,16 @@ public class BoardExample {
 			System.out.println("1.추가 2.수정 3.목록 4.삭제 5.조회 6.작성자조회 9.종료");
 			System.out.println("----------------------------------------------");
 			System.out.print("선택>> ");
-			int menu = scn.nextInt();
+			
+			//int menu = scn.nextInt();	//사용자 입력값을 숫자로 반환
+			//예외발생 처리(숫자가 들어가야하는데 문자가 들어갔을 경우)
+			int menu = -1;
+			try {
+				menu = scn.nextInt();
+			} catch(InputMismatchException e) {
+				System.out.println("잘못된 처리를 시도했습니다.");
+			}
+			
 			scn.nextLine();	//nextInt를 쓰면 nextLine 써 줘라!
 			
 			if(menu == 1) {
@@ -86,15 +96,17 @@ public class BoardExample {
 					getBoard.getDetailInfo();
 				}
 				
-			} else if(menu == 6) {
-				System.out.print("작성자 이름 조회>> ");
-				String bWriter = scn.nextLine();
-				
-				Board getBoard = boardList.sNameBoard(bWriter);
-				if(getBoard == null) {
-					System.out.println("조회결과 없습니다.");
-				} else {
-					//??????????????????????????????????????????????????
+			} else if(menu == 6) {	//작성자 기준
+				System.out.print("검색할 작성자 입력>> ");
+				String sWriter = scn.nextLine();
+				Board[] writerList = boardList.getWriterList(sWriter);
+				//wirterList 내용출력
+				System.out.println("게시글번호	제목		내용		사용자	조회수");
+				System.out.println("===================================================");
+				for(Board board : writerList) {
+					if(board != null) {
+						board.getInfo();
+					}
 				}
 				
 				

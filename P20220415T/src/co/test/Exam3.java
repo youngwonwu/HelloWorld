@@ -6,20 +6,18 @@ package co.test;
 public class Exam3 {
 	public static void main(String[] args) {
 		
-		int[] num = new int[10];
-		num = new int[] {(int) ((Math.random()*10) + 1)};
-		
+		int[] a = new int[10];
 		int sum=0;
-		for(int i=0; i<=10; i++) {
-			sum += num[i];
-			
-			int avg = sum / 10;
-			System.out.println("평균 : " + avg);
+		
+		for(int i=0; i<10; i++) {
+			int num = (int) (Math.random()*10) + 1;
+			a[i] = num;
+			sum += num;
 		}
+		int avg = sum / 10;
+		System.out.println("평균 : " + avg);
 		
-
-		
-		
+		//배열 잘 모르겠으....
 		
 	}
 }

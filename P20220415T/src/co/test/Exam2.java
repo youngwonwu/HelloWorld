@@ -8,21 +8,26 @@ package co.test;
 // 2의 배수의 합: ??, 3의 배수의 합; ??
 public class Exam2 {
 	public static void main(String[] args) {
+		
+		
+		int evenSum = 0;
+		int oddSum = 0;
 
-		for(int i=0; i<=10; i++) {
-			int num = (int) ((Math.random() * 10) + 1);
+		for(int i=0; i<10; i++) {
+			int num = (int) (Math.random() * 10) + 1;
 			
 			if ((num%2 == 0) && (num%3 == 0)) {
-				System.out.printf("%d는 2와 3의 공통배수입니다.\n", num);
+				evenSum += num;
+				oddSum += num;
 			} else if (num % 2 ==0) {
-				System.out.printf("%d는 2의 배수입니다.\n", num);
+				evenSum += num;
 			} else if (num % 3 == 0){
-				System.out.printf("%d는 3의 배수입니다.\n", num);
-			} else {
-				System.out.printf("%d는 2와 3의 배수가 아닙니다.\n", num);
+				oddSum += num;
 			}
 			
 		}
+		System.out.println("2의 배수의 합:" + evenSum);
+		System.out.println("3의 배수의 합:" + oddSum);
 		
 	}
 }

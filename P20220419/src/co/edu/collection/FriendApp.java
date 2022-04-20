@@ -43,6 +43,7 @@ public class FriendApp {
 				
 				Friend mFriend = new Friend(mName, modname);
 				service.modFriend(mFriend);
+				System.out.println(mFriend);
 				
 				
 			} else if(menu == 3) {
@@ -57,9 +58,6 @@ public class FriendApp {
 				
 			}
 		}
-		
-		
-		
-		
+
 	}
 }

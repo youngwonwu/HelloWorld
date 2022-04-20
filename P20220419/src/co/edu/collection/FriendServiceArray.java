@@ -20,8 +20,8 @@ public class FriendServiceArray implements FriendService {
 	public void modFriend(Friend friend) {	//수정
 		
 		for(int i=0; i<friends.length; i++) {
-			if(friends[i].getName().equals(friend.getName())) {
-				friends[i].getName();
+			if(friends[i] != null && friends[i].getName().equals(friend.getName())) {
+				friends[i].setName(friend.getName());
 				break;
 			}
 		}
@@ -31,7 +31,7 @@ public class FriendServiceArray implements FriendService {
 	public void remFriend(String name) {	//삭제
 		
 		for(int i=0; i<friends.length; i++) {
-			if(friends[i].getName().equals(name)) {
+			if(friends[i] != null && friends[i].getName().equals(name)) {
 				friends[i] = null;
 				break;
 			}
@@ -41,8 +41,8 @@ public class FriendServiceArray implements FriendService {
 	@Override
 	public Friend findFriend(String name) {	//리스트. 한건조회만
 		for(int i=0; i<friends.length; i++) {
-			if(friends[i].getName() == name) {
-				
+			if(friends[i] != null && friends[i].getName().equals(name)) {
+				return friends[i];
 			}
 		}
 		

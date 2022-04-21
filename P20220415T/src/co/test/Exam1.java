@@ -19,14 +19,23 @@ public class Exam1 {
 		num2 = scn.nextInt();
 		System.out.println("세번째 정수값>> ");
 		num3 = scn.nextInt();
+	
+//		if(num1 > num2 && num1 > num3) {
+//			System.out.println("num1");
+//		} else if(num2 > num1 && num2 > num3) {
+//			System.out.println("num2");
+//		} else if(num3 > num1 && num3 > num2) {
+//			System.out.println("num3");
+//		}
 		
-		if(num1 > num2 && num1 > num3) {
-			System.out.println("num1");
-		} else if(num2 > num1 && num2 > num3) {
-			System.out.println("num2");
-		} else if(num3 > num1 && num3 > num2) {
-			System.out.println("num3");
+		//T
+		int max = num1;
+		if(max < num2) {
+			max = num2;
 		}
-		
+		if(max < num3) {
+			max = num3;
+		}
+		System.out.println("세 정수 중에서 큰값은: " + max);
 	}
 }

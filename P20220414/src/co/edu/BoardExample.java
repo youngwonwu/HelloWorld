@@ -20,7 +20,7 @@ public class BoardExample {
 			
 			//int menu = scn.nextInt();	//사용자 입력값을 숫자로 반환
 			//예외발생 처리(숫자가 들어가야하는데 문자가 들어갔을 경우)
-			int menu = -1;
+			int menu = -1;	// 그냥 초기값
 			try {
 				menu = scn.nextInt();
 			} catch(InputMismatchException e) {
@@ -109,6 +109,13 @@ public class BoardExample {
 					}
 				}
 				
+//			}else if(menu == 6) {	//작성자 기준
+//					System.out.print("검색할 작성자 입력>> ");
+//					String sWriter = scn.nextLine();
+//				System.out.println("게시글번호	제목		내용		사용자	조회수");
+//				System.out.println("===================================================");
+//					boardList.getWriterList(sWriter);
+					
 				
 			}else if(menu == 9) {
 				System.out.println("프로그램을 종료하겠습니다.");

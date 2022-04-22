@@ -22,9 +22,9 @@ public class ForExample2 {
 			}
 			if (i % 2 == 0) {
 				System.out.println("현재 i의 값 =>" + i);
-				continue;	//continue 구문 아래 코드 실행 없이 다음 순번
+				continue;	//continue 구문 아래 코드 실행 없이 다음 순번인 for문으로
 			}
-			sum = sum + i;
+			sum = sum + i;	//홀수인 값만 더한다
 		}
 		System.out.println("sum => " + sum);
 

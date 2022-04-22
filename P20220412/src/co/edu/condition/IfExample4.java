@@ -5,10 +5,10 @@ public class IfExample4 {
 	public static void main(String[] args) {
 		
 		// 임의의 값을 생성해주는 Math.random()
-//		double = randomVal;
+//		double randomVal;
 //		double randomVal = Math.random() * 10;
 //		randomVal = (int) (Math.random() * 10) + 1;	//반환값이 double, 0 <= 값 < 1
-//		randomVal = (int) (Math.random() * 100) + 1;
+//		randomVal = (int) (Math.random() * 100) + 1;	//Math.random() 은 0.0000000..으로 나오는데 int로 반환하면서 소수점아래를 날려버린다
 //		int randomVal = (int) (Math.random() * 100) + 1;
 //		System.out.println(randomVal);
 		

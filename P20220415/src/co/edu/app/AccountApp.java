@@ -99,6 +99,27 @@ public class AccountApp {
 	
 	//출금처리 시 실행 메소드
 	public void withdraw() {
+		System.out.println("-----------");
+		System.out.println("출금");
+		System.out.println("-----------");
+		System.out.println("계좌번호>> ");
+		String maccNumber = scn.nextLine();
+		
+		for(int i=0; i<accounts.length; i++) {
+			if(accounts[i] == null) {
+				System.out.println("입력한 계좌번호가 없습니다.");
+				break;
+			}
+			if (accounts[i].getAccNumber().equals(maccNumber) && accounts[i] != null) {
+				System.out.println("출금액>> ");
+				int mdeposit = scn.nextInt();
+				accounts[i].setAccBalance(accounts[i].getAccBalance() - mdeposit);
+				System.out.println("정상적으로 처리되었습니다.");
+				break;
+			} else {
+				System.out.println("계좌번호가 다릅니다.");
+			}
+		}
 		
 	}
 	

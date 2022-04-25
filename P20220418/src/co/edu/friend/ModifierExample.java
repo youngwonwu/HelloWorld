@@ -4,7 +4,8 @@ public class ModifierExample {
 
 	public static void main(String[] args) {
 
-		Friend friend = new f
+		Friend friend = new Friend();	//default, protected 접근 가능
+		friend.getName();
 		
 	}
 

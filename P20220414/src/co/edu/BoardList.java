@@ -69,29 +69,29 @@ public class BoardList {
 	}
 	
 	//작성자이름 조회 : 
-	public Board[] getWriterList(String Writer) {
-		Board[] sBoards = new Board[5];	//몇개보낼지 메소드 지정
-		
-		for(int i=0; i<boards.length; i++) {	//찾을 대상 배열
-			if(boards[i] != null && boards[i].getWriter().equals(Writer)) {	//boards[i] != null 
-				for(int j=0; j<sBoards.length; j++) {	//이름 조회해서 새롭게 반환해 줘야할 배열?
-					if(sBoards[j] == null) {
-						sBoards[j] = boards[i];	//값을담아 보낼 배열, 찾아야할 원본
-						break;
-					}
-				}
-			}
-		}
-		return sBoards;
-	}
-//	public void getWriterList(String Writer) {
+//	public Board[] getWriterList(String Writer) {
+//		Board[] sBoards = new Board[5];	//몇개보낼지 메소드 지정
 //		
 //		for(int i=0; i<boards.length; i++) {	//찾을 대상 배열
 //			if(boards[i] != null && boards[i].getWriter().equals(Writer)) {	//boards[i] != null 
-//				boards[i].getInfo();
+//				for(int j=0; j<sBoards.length; j++) {	//이름 조회해서 새롭게 반환해 줘야할 배열?
+//					if(sBoards[j] == null) {
+//						sBoards[j] = boards[i];	//값을담아 보낼 배열, 찾아야할 원본
+//						break;
+//					}
+//				}
 //			}
 //		}
+//		return sBoards;
 //	}
+	public void getWriterList(String Writer) {
+		
+		for(int i=0; i<boards.length; i++) {	//찾을 대상 배열
+			if(boards[i] != null && boards[i].getWriter().equals(Writer)) {	//boards[i] != null 
+				boards[i].getInfo();
+			}
+		}
+	}
 	
 	//게시물 목록
 	public Board[] boardList() {

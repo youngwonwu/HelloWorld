@@ -96,25 +96,25 @@ public class BoardExample {
 					getBoard.getDetailInfo();
 				}
 				
-			} else if(menu == 6) {	//작성자 기준
-				System.out.print("검색할 작성자 입력>> ");
-				String sWriter = scn.nextLine();
-				Board[] writerList = boardList.getWriterList(sWriter);
-				//wirterList 내용출력
-				System.out.println("게시글번호	제목		내용		사용자	조회수");
-				System.out.println("===================================================");
-				for(Board board : writerList) {
-					if(board != null) {
-						board.getInfo();
-					}
-				}
-				
-//			}else if(menu == 6) {	//작성자 기준
-//					System.out.print("검색할 작성자 입력>> ");
-//					String sWriter = scn.nextLine();
+//			} else if(menu == 6) {	//작성자 기준
+//				System.out.print("검색할 작성자 입력>> ");
+//				String sWriter = scn.nextLine();
+//				Board[] writerList = boardList.getWriterList(sWriter);
+//				//wirterList 내용출력
 //				System.out.println("게시글번호	제목		내용		사용자	조회수");
 //				System.out.println("===================================================");
-//					boardList.getWriterList(sWriter);
+//				for(Board board : writerList) {
+//					if(board != null) {
+//						board.getInfo();
+//					}
+//				}
+				
+			}else if(menu == 6) {	//작성자 기준
+					System.out.print("검색할 작성자 입력>> ");
+					String sWriter = scn.nextLine();
+				System.out.println("게시글번호	제목		내용		사용자	조회수");
+				System.out.println("===================================================");
+					boardList.getWriterList(sWriter);
 					
 				
 			}else if(menu == 9) {
